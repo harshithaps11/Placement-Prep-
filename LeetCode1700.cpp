@@ -22,13 +22,13 @@ public:
             }
         }
 
-        return 0;
+        return count0 + count1;
     }
 };
 
 int main(){
-    vector<int> Students = {1, 1, 0, 0};
-    vector<int> Sandwiches = {0, 1, 0, 1};
+    vector<int> Students = {1,1,0,0,1,1,1};
+    vector<int> Sandwiches = {0, 1, 0, 1,0,0,1};
     Solution s;
     int result = s.countStudents(Students, Sandwiches);
     cout << "Number of students unable to eat: " << result << endl;
