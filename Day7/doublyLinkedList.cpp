@@ -14,7 +14,23 @@ class Node{
     }
 };
 void traverse(Node* head){
+    Node* temp = head;
+    while(temp != NULL){
+        cout<<temp->data<<" ";
+        temp = temp->next;
+    }
+    cout<<endl;
     
+}
+void addatend(Node* head, int data){
+    Node* newNode = new Node(data);
+    Node* temp = head;
+    while(temp->next != NULL){
+        temp = temp->next;
+    }
+    temp->next = newNode;
+    newNode->prev = temp;
+
 }
 int main(){
     Node* head = new Node(10);
